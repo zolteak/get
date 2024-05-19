@@ -1,9 +1,11 @@
-const get = (array, index, defaultString = null) => {
-    if (index >= array.length || index < 0) {
-        return(defaultString)
-    } else {
-        return array[index]
+const get = (array, index, defaultVal = null) => {
+    let result = defaultVal;
+    
+    if (index < array.length && index >= 0) {
+        result = array[index];
     }
+    
+    return result;
 };
 
 exports.get = get;
